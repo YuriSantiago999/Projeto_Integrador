@@ -8,27 +8,37 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+
 @Entity
 @Table(name="tema")
 
 public class Tema {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Size(max = 200)
+	
 	private long id;
 	
 	@NotNull
-	@Size(min= 10, max= 200)
-	private String tema;
+	@Size(min=2, max=200)
+	private  String tema;
+	
 	
 	@NotNull
-	@Size(min= 10, max= 200)
+	@Size(min=2, max=200)
 	private String categoria;
 	
-	
 	@NotNull
-	@Size(min= 2, max= 2)
+	@Size(min=2, max=2)
 	private String estado;
+
+	public String getEstado() {
+		return estado;
+	}
+
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 
 
 	public long getId() {
@@ -61,14 +71,7 @@ public class Tema {
 	}
 
 
-	public String getEstado() {
-		return estado;
-	}
-
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+	
 }
 
 
