@@ -33,6 +33,8 @@ public class Usuario {
 	@Size(min= 6)
 	private String senha;
 	
+	private String imagem;
+
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("nome")
 	private List<Postagem> postagem;
@@ -76,6 +78,14 @@ public class Usuario {
 
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
+	}
+	
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 }

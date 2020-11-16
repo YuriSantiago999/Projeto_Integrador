@@ -47,11 +47,11 @@ public class UsuarioController {
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
 	
-	@PostMapping
+	/*@PostMapping
 	public ResponseEntity<Usuario> post(@RequestBody Usuario usuario) {
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(repository.save(usuario));
-	}
+	}*/
 	
 	@PostMapping("/logar")
 	public ResponseEntity<UsuarioLogin> Autentication(@RequestBody Optional<UsuarioLogin> user) {
@@ -67,8 +67,8 @@ public class UsuarioController {
 	}
 
 	
-	/*@PutMapping
-	public ResponseEntity<Usuario> put(@RequestBody Usuario usuario) {
+	@PutMapping
+	public ResponseEntity<Usuario> Put(@RequestBody Usuario usuario) {
 		return ResponseEntity.ok(repository.save(usuario));
 	}
 	
@@ -77,7 +77,7 @@ public class UsuarioController {
 		repository.deleteById(id);
 	
 
-	}*/
+	}
 	
 	
 	

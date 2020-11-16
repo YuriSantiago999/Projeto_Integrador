@@ -8,6 +8,26 @@ public class UsuarioLogin {
 	
 	private String senha;
 	
+	private String imagem;
+	
+	private long id;
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
+	}
+
 	public String getNome() {
 		return nome;
 	}
